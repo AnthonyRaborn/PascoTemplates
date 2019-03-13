@@ -1,0 +1,141 @@
+%----------------------------------------------------------------------------------------
+% LOAD THE BASE THEME (METROPOLIS)
+%----------------------------------------------------------------------------------------
+\usetheme[progressbar=frametitle,sectionpage=progressbar]{metropolis}
+\makeatletter
+    \setlength{\metropolis@progressinheadfoot@linewidth}{4pt}
+\makeatother
+\usepackage{helvet} % pdfLatex analogue to Arial
+\renewcommand{\familydefault}{\sfdefault} % actually changes the font
+
+%----------------------------------------------------------------------------------------
+% NUMBERED TOC SECTIONS
+%----------------------------------------------------------------------------------------
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{subsubsection in toc}[subsubsections numbered]
+
+%----------------------------------------------------------------------------------------
+% PCS COLOR THEMES
+%----------------------------------------------------------------------------------------
+\definecolor{PCSblue}{RGB}{38,72,136}
+\definecolor{PCSgreen}{RGB}{145,176,61}
+\definecolor{PCSred}{RGB}{227,77,38}
+\colorlet{PCSblue2}{PCSblue!30!}
+
+%----------------------------------------------------------------------------------------
+% ADJUST THE DEFAULT THEME COLORS TO USE PCS COLORS
+%----------------------------------------------------------------------------------------
+% PALETTE
+\setbeamercolor{palette primary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette secondary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette tertiary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette quaternary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette sidebar primary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette sidebar secondary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette sidebar tertiary}{bg=PCSblue,fg=white}
+\setbeamercolor{palette sidebar quaternary}{bg=PCSblue,fg=white}
+% SPECIFIC PIECES
+\setbeamercolor{structure}{fg=PCSblue} % itemize, enumerate, etc
+\setbeamercolor{subsection in head/foot}{bg=PCSblue,fg=white}
+\setbeamercolor{alerted text}{fg=PCSred}
+\setbeamercolor{progress bar}{bg=PCSgreen,fg=PCSgreen}
+\setbeamercolor{background canvas}{bg=PCSblue!10,fg=white}
+\setbeamercolor{normal text}{fg=PCSblue}
+% TOC COLORS
+\setbeamercolor{section in toc}{fg=PCSblue}
+\setbeamercolor{section in toc shaded}{fg=gray}
+\setbeamercolor{subsection in toc shaded}{fg=gray}
+\setbeamercolor{subsubsection in toc shaded}{fg=gray}
+% BLOCK COLORS
+\setbeamercolor{block title alerted}{bg=PCSblue!10,fg=PCSred}
+\setbeamercolor{block body alerted}{bg=PCSred!15,fg=PCSred}
+\setbeamercolor{block title example}{bg=PCSblue!10,fg=PCSgreen}
+\setbeamercolor{block body example}{bg=PCSgreen!15,fg=PCSgreen}
+
+%----------------------------------------------------------------------------------------
+% FOOTER LINE SETUP
+%----------------------------------------------------------------------------------------
+\setbeamercolor{footline}{bg=PCSblue!10}
+
+\setbeamertemplate{footline}{%
+	\begin{beamercolorbox}[wd=\textwidth]{footline}
+        \fcolorbox{PCSblue!10}{PCSblue!10}{\includegraphics[height=.5cm]{logos/pcs_logo_emblem_color}}%
+        \hfill%
+	      \shorttitle
+	      \iftoggle{shortauthor}{
+	      \hfill
+	      \insertshortauthor
+	      \hfill
+	      }
+	      \hfill
+        \usebeamercolor[fg]{page number in head/foot}%
+        \usebeamerfont{page number in head/foot}%
+        \insertframenumber\,/\,\inserttotalframenumber\kern1em%
+	\end{beamercolorbox}
+ }
+
+%----------------------------------------------------------------------------------------
+% BEGINNING SECTION TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+% 
+\iftoggle{begintoc}{
+  \AtBeginSection[]
+  {
+    \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+    \end{frame}
+  }
+  \AtBeginSubsection[]
+  {
+  \begin{frame}
+    \subsectionpage
+    \end{frame}
+  }
+}{
+  \AtBeginSection[]
+  {
+  \begin{frame}
+    \subsectionpage
+    \end{frame}
+  }
+  \AtBeginSubsection[]
+  {
+  \begin{frame}
+    \subsectionpage
+    \end{frame}
+  }
+}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM TITLE PAGE (trial)
+%----------------------------------------------------------------------------------------
+\makeatletter
+\setbeamertemplate{title page}{
+  \begin{minipage}[b][.3\paperheight]{\textwidth}
+	  \tikz[remember picture,overlay]
+  		\node[fill=PCSblue,minimum width=16cm, minimum height=2cm] at
+	  		([yshift=-1.3cm]current page.north)
+		  	{\includegraphics[width=.4\textwidth]{logos/pcs_logo_reverse}};
+	\end{minipage}
+		% \vfill%
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    \usebeamertemplate*{title separator}
+    \usebeamertemplate*{author}
+    \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+  %   \vfill
+  %   \vspace*{.1mm}
+  % \end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+% CONVERTING RMARKDOWN TEMPLATE YAML TO LATEX
+%----------------------------------------------------------------------------------------
+% 
+% \title[$shorttitle$]{$title$}
+% \subtitle{$subtitle$}
+% \author{$author$}
+% \date{$date$}

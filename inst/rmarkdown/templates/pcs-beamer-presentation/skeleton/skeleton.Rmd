@@ -1,0 +1,54 @@
+---
+title: "Template Title, Duh"
+subtitle: "Optional"
+short-title: "Template"
+institution: "Pasco County Schools"
+author: 
+  - "My Name1,"
+  - "Your Name2,"
+  - "Random Name3,"
+  - "WhyNot Name4"
+short-author: "Name1, Name2, Name3, Name4"
+date: \today
+begin-toc: false
+output: 
+  beamer_presentation:
+    template: beamer-presentation-template.tex
+    includes:
+        in_header: beamer-presentation-preamble.tex # formatting template
+        after_body: beamer-presentation-end.tex # for additional end-of-slides table of contents
+    slide_level: 3 # three pound signs create a new slide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Big First Section
+
+## New Subsection
+
+### Slide Title
+
+Exponential formula (e.g., the Rasch Model):
+
+$$ P(Y_i=1) = \frac{\exp(\theta_j+\delta_i)}{1+\exp(\theta_j+\delta_i)}$$
+
+### Second Slide Title
+
+![3PL Item Response Function](images/3pl-irf.png)
+
+## Subsection Two
+
+### Section Two Title One
+
+Something.
+
+# Small Section Section
+
+## S2S1
+
+### Needs a slide
+
+So....
+

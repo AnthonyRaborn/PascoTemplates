@@ -1,0 +1,94 @@
+%----------------------------------------------------------------------------------------
+% REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx} % Required for PCS logo
+\pdfminorversion=7 % eliminates a warning when compliling. May need to be changed if graphics aren't appropriate
+\usepackage{lipsum} % filler text
+\usepackage{fancyhdr} % better header/footer styles
+\usepackage{etoolbox} % postscript toggle
+\usepackage{parskip} % paragraph distance
+\usepackage{microtype} % slightly better typography (looks)
+\usepackage{setspace} % more specific line spacing
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
+\usepackage[link=off]{phonenumbers} % phone number formatting
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % Required for adjusting page dimensions
+\geometry{
+	%headheight=1pt, % header height
+	headsep=0.1cm, % seperation between header and body
+	top=1.5cm, % Top margin
+	bottom=3.2cm, % Bottom margin
+	left=2cm, % Left margin
+	right=2cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+%---------------------------------------------------------------------------------------
+% HEADER INFORMATION
+%---------------------------------------------------------------------------------------
+\fancyhf{}
+\fancyhead[L]{
+	\begin{minipage}{.2\textwidth}
+		\includegraphics[width=1.5cm]{logos/pcs_logo_emblem_grayscale} \vspace{1mm}
+		\end{minipage}
+	\begin{minipage}{.6\textwidth}
+		\centering \small
+		Pasco County Schools \\
+		Kurt S. Browning, Superintendent of Schools\\
+		7227 Land O'Lakes Boulevard \textbullet ~Land O'Lakes, Florida 34638
+		\end{minipage}
+}
+\setlength{\headheight}{48pt}
+%----------------------------------------------------------------------------------------
+% FOOTER INFORMATION
+%----------------------------------------------------------------------------------------
+\renewcommand{\footrulewidth}{2pt}
+\fancyfoot[C]{
+%	\begin{center}
+(813) 794-2000 \hfill 
+\textbullet \hfill 
+(352) 524-2000 \hfill 
+\textbullet \hfill 
+(727) 774-2000 \hfill 
+\textbullet \hfill 
+\href{http://www.pascoschools.org}{www.pascoschools.org}
+%	\end{center}
+}
+%----------------------------------------------------------------------------------------
+% NEW COMMANDS FOR FILLING IN LETTER
+%----------------------------------------------------------------------------------------
+\newcommand{\Who}[1]{\renewcommand{\Who}{#1}}
+\newcommand{\Title}[1]{\renewcommand{\Title}{#1}}
+\newcommand{\Department}[1]{\renewcommand{\Department}{#1}}
+\newcommand{\Email}[1]{\renewcommand{\Email}{#1}}
+\newcommand{\Phone}[1]{\renewcommand{\Phone}{#1}}
+\newcommand{\Fax}[1]{\renewcommand{\Fax}{#1}}
+\newcommand{\Office}[1]{\renewcommand{\Office}{#1}}
+\newcommand{\authordetails}[1]{\renewcommand{\authordetails}{#1}}
+
+\newcommand{\Study}[1]{\renewcommand{\Study}{#1}}
+\newcommand{\StudyAuthor}[1]{\renewcommand{\StudyAuthor}{#1}}
+\newcommand{\StudyAuthorTitle}[1]{\renewcommand{\StudyAuthorTitle}{#1}}
+\newcommand{\StudyAddress}[1]{\renewcommand{\StudyAddress}{#1}}
+\newcommand{\CopyTo}[1]{\renewcommand{\CopyTo}{#1}}
+\newcommand{\CopyOffice}[1]{\renewcommand{\CopyOffice}{#1}}
+\newcommand{\studydetails}[1]{\renewcommand{\studydetails}{#1}}
+
+\newtoggle{postscript}
+
+\authordetails{ % can be reordered
+	\Department \newline% Your department/institution
+	\Who, \Title \newline% Name and title
+	Email: \Email \newline% Your email address
+	Phone: \Phone ~Fax: \Fax \newline% Your phone & fax number
+}
+\studydetails{
+	\StudyAuthorTitle \\ % name and title of individual who submitted the study
+	\StudyAddress \\ % Mailing address for the author
+}
+%----------------------------------------------------------------------------------------
+% PARAGRAPH OPTIONS
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt} % Remove paragraph indent
+\setlength{\parskip}{1em} % Adds spaces between paragraphs

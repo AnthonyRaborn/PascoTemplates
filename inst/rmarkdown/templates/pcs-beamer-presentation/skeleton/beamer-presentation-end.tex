@@ -1,0 +1,22 @@
+
+{    
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[wd=\textwidth]{footline}
+        \fcolorbox{PCSblue!10}{PCSblue!10}{\includegraphics[height=.5cm]{logos/pcs_logo_emblem_color}}%
+        \hfill%
+	      \shorttitle
+	      \iftoggle{shortauthor}{
+	      \hfill
+	      \insertshortauthor
+	      \hfill
+	      }
+	      \hfill
+	      Table of Contents
+	      \hspace{1pt}
+	\end{beamercolorbox}
+ }
+    
+\begin{frame}[noframenumbering]{Table of Contents}
+  \tableofcontents
+\end{frame}
+}

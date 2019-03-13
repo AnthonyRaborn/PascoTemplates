@@ -1,0 +1,100 @@
+\documentclass{beamer}
+
+\input{beamer-presentation-preamble}
+
+\title[PSC Beamer Theme]{A Pasco County Schools Beamer Theme}
+\subtitle{Work in Progress}
+\author[A. Raborn]{Anthony Raborn}
+\institute[PSC]{Pasco County Schools}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{First Section}
+\subsection{One}
+\begin{frame}\frametitle{First Slide}
+Some content here.
+
+\alert{Pay attention to this!}
+\end{frame}
+
+\section{New Section}
+\subsection{One}
+\begin{frame}
+\frametitle{A Second Section}
+Welcome to Section Two.
+\end{frame}
+
+\subsection{Two}
+\begin{frame}\frametitle{Second Slide Second Section}
+
+This isn't important, but you should pay attention anyways.
+
+\begin{itemize}
+\item First item text.
+	\begin{enumerate}
+		\item Some sub-items counted off.
+		\item This will probably be used often.
+	\end{enumerate}
+\item Second item text.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Examples of Blocks}
+\begin{block}{This is a block}
+Something goes here that you want to block off.
+\end{block}
+\begin{alertblock}{This is an alert block}
+\vspace{.1cm} %\vspace before and after makes it look a little nicer
+Something important goes here that you want to block off.
+\vspace{.1cm}
+\end{alertblock}
+\begin{exampleblock}{This is an example block}
+\vspace{.1cm}
+Something that you're using as an example goes here.
+\vspace{.1cm}
+\end{exampleblock}
+\end{frame}
+
+\section{Equations}
+
+\begin{frame}
+\frametitle{Trigonometric Functions}
+\begin{align*}
+          \sin A \cos B &= \frac{1}{2}\left[ \sin(A-B)+\sin(A+B) \right] \\
+          \sin A \sin B &= \frac{1}{2}\left[ \sin(A-B)-\cos(A+B) \right] \\
+          \cos A \cos B &= \frac{1}{2}\left[ \cos(A-B)+\cos(A+B) \right] \\
+          \end{align*}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Item Response Theory Model}
+The three parameter logistic model (\verb|3PL|) is defined as:
+\begin{equation}\label{eq:3PL}
+p_i(\theta)=c_i+\frac{1-c_i}{1+exp{-a_i(\theta-b_i)}}
+\end{equation}
+
+We can refer to equation \eqref{eq:3PL} if we wanted to, but notice the automatic reference uses the equation \emph{number}, not the equation \emph{label} that we give it.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A Figure with a Caption}
+The item response function for the \verb|3PL| looks like this:
+
+\begin{figure}
+\fcolorbox{white}{white}{\includegraphics[width=.8\textwidth]{images/3pl-irf.png}}
+\caption{3PL IRF}
+\end{figure}
+\end{frame}
+
+\begin{frame}[plain,standout]
+That's all, folks!
+\end{frame}
+
+\end{document}

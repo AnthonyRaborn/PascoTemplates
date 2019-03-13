@@ -1,0 +1,75 @@
+\documentclass[11pt,letterpaper]{article}
+
+\input{irb-letter-preamble.tex}
+
+%----------------------------------------------------------------------------------------
+% INFORMATION
+%----------------------------------------------------------------------------------------
+\Who{$Who$}
+\Title{$Title$}
+\Department{$Department$}
+\Office{Office of \Department}
+\Email{$Email$}
+\Phone{\phonenumber[country=US,area-code-sep=brackets]{$Phone$}}
+\Fax{\phonenumber[country=US,area-code-sep=brackets]{$Fax$}}
+
+\Study{$Study$}
+\StudyAuthor{$StudyAuthor$}
+\StudyAuthorTitle{$StudyAuthorTitle$}
+\StudyAddress{$StudyAddress$}
+\CopyTo{$CopyTo$}
+\CopyOffice{$CopyOffice$}
+\pagestyle{fancy}
+
+\begin{document}
+\begin{tiny}
+	\begin{spacing}{1}
+  \authordetails
+  \end{spacing}
+\end{tiny}
+
+\today
+
+\bigskip
+
+\studydetails
+
+Dear \StudyAuthor:
+
+
+At this time, we must deny your request to conduct your research study in Pasco
+County Schools entitled ``\Study.''
+
+
+Many research studies are educationally relevant and worthy of investigation. However,
+we sometimes have to weigh the impact of multiple demands for time on teachers and
+school administrators and we hope you can appreciate our position.
+
+Sincerely,
+
+\bigskip
+
+\bigskip
+
+\Who, \Title \newline
+\Office
+
+\bigskip
+
+%---------------------------------------------------------------------------------------
+% OPTIONAL POSTSCRIPT REMARKS
+%---------------------------------------------------------------------------------------
+\toggletrue{postscript} % comment out to not use postscript
+\iftoggle{postscript}{
+/jg \\
+Attachments
+
+\vspace{\baselineskip}
+
+\begin{tabular}{@{}ll}
+xc:& \CopyTo \\
+& \CopyOffice
+\end{tabular}
+}
+
+\end{document}
