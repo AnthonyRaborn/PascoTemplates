@@ -1,7 +1,7 @@
 %----------------------------------------------------------------------------------------
 % REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
-\usepackage{graphicx} % Required for PCS logo
+\usepackage{graphicx, transparent, eso-pic} % Required for PCS logo & watermark background
 \pdfminorversion=7 % eliminates a warning when compliling. May need to be changed if graphics aren't appropriate
 \usepackage{lipsum} % filler text
 \usepackage{fancyhdr} % better header/footer styles
@@ -46,12 +46,12 @@
 \renewcommand{\footrulewidth}{2pt}
 \fancyfoot[C]{
 %	\begin{center}
-(813) 794-2000 \hfill 
-\textbullet \hfill 
-(352) 524-2000 \hfill 
-\textbullet \hfill 
-(727) 774-2000 \hfill 
-\textbullet \hfill 
+(813) 794-2000 \hfill
+\textbullet \hfill
+(352) 524-2000 \hfill
+\textbullet \hfill
+(727) 774-2000 \hfill
+\textbullet \hfill
 \href{http://www.pascoschools.org}{www.pascoschools.org}
 %	\end{center}
 }
@@ -92,3 +92,17 @@
 %----------------------------------------------------------------------------------------
 \setlength{\parindent}{0pt} % Remove paragraph indent
 \setlength{\parskip}{1em} % Adds spaces between paragraphs
+
+%------------------------------------------------------------------------------------------------------------------------------
+% CREATING A WATERMARK ACROSS ENTIRE PAGE
+% solution from: https://tex.stackexchange.com/a/46281
+%------------------------------------------------------------------------------------------------------------------------------
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+{\transparent{.05}\includegraphics[width=\textwidth,%
+keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
+\vfill
+}}}
