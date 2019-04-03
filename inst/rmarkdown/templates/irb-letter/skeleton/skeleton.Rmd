@@ -4,6 +4,7 @@ date: \today
 output: 
   pdf_document:
     template: irb-letter-approval-template.tex #approval
+    # template: irb-letter-approval-conditional-template.tex #conditional
     # template: irb-letter-denial-template.tex #denial
     keep_tex: true
 Who: "Peggy Jones"
@@ -20,6 +21,9 @@ StudyAddress: >
   University of South Florida \newline
   4202 East Fowler Avenue - EDU 105 \newline
   Tampa, FL 33620-5650
+Purpose: >
+  Nothing.
+Conditional: false
 CopyTo: "Vicki Papaemanuel, Supervisor"
 CopyOffice: "Office for Student Support Programs and Services"
 ---
