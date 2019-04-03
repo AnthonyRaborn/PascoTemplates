@@ -10,7 +10,9 @@
 \Department{$Department$}
 \Office{Office of \Department}
 \Email{$Email$}
-\Phone{\phonenumber[country=US,area-code-sep=brackets]{$Phone$}}
+\PhoneA{\phonenumber[country=US,area-code-sep=brackets]{$PhoneA$}}
+\PhoneB{\phonenumber[country=US,area-code-sep=brackets]{$PhoneB$}}
+\PhoneC{\phonenumber[country=US,area-code-sep=brackets]{$PhoneC$}}
 \Fax{\phonenumber[country=US,area-code-sep=brackets]{$Fax$}}
 
 \Study{$Study$}
@@ -19,15 +21,16 @@
 \StudyAddress{$StudyAddress$}
 \CopyTo{$CopyTo$}
 \CopyOffice{$CopyOffice$}
+\Purpose{$Purpose$}
 \pagestyle{fancy}
 
 \begin{document}
-\AddToShipoutPicture{\BackgroundPic}
-\begin{tiny}
+% \AddToShipoutPicture{\BackgroundPic}
+\begin{footnotesize}
 	\begin{spacing}{1}
 \authordetails
 	\end{spacing}
-\end{tiny}
+\end{footnotesize}
 
 \today
 
@@ -44,11 +47,9 @@ Pasco County Schools entitled ``\Study.'' As per district procedures, teacher
 participants are not to receive compensation individually but may receive compensation to a
 school account for the teacher's classroom.
 
-The purpose of your study is to find out what is the best type of training to teach school staff
-how to use data to adapt interventions for students with behavioral and emotional concerns.
+\Purpose
 
-Your Pasco County Schools' contact person is Vicki Papaemanuel, Supervisor, Office for Student
-Support Programs and Services.
+Your Pasco County Schools' contact person is \CopyTo, \CopyOffice.
 
 We are always interested in the outcome of research conducted in our school system. When
 your study is complete, please forward a brief summary of your findings to the Office for

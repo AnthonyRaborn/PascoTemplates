@@ -10,7 +10,9 @@
 \Department{$Department$}
 \Office{Office of \Department}
 \Email{$Email$}
-\Phone{\phonenumber[country=US,area-code-sep=brackets]{$Phone$}}
+\PhoneA{\phonenumber[country=US,area-code-sep=brackets]{$PhoneA$}}
+\PhoneB{\phonenumber[country=US,area-code-sep=brackets]{$PhoneB$}}
+\PhoneC{\phonenumber[country=US,area-code-sep=brackets]{$PhoneC$}}
 \Fax{\phonenumber[country=US,area-code-sep=brackets]{$Fax$}}
 
 \Study{$Study$}
@@ -19,15 +21,16 @@
 \StudyAddress{$StudyAddress$}
 \CopyTo{$CopyTo$}
 \CopyOffice{$CopyOffice$}
+\Purpose{$Purpose$}
 \pagestyle{fancy}
 
 \begin{document}
-\AddToShipoutPicture{\BackgroundPic}
-\begin{tiny}
+% \AddToShipoutPicture{\BackgroundPic}
+\begin{footnotesize}
 	\begin{spacing}{1}
   \authordetails
   \end{spacing}
-\end{tiny}
+\end{footnotesize}
 
 \today
 
@@ -60,17 +63,17 @@ Sincerely,
 %---------------------------------------------------------------------------------------
 % OPTIONAL POSTSCRIPT REMARKS
 %---------------------------------------------------------------------------------------
-\toggletrue{postscript} % comment out to not use postscript
-\iftoggle{postscript}{
-/jg \\
-Attachments
-
-\vspace{\baselineskip}
-
-\begin{tabular}{@{}ll}
-xc:& \CopyTo \\
-& \CopyOffice
-\end{tabular}
-}
+% \toggletrue{postscript} % comment out to not use postscript
+% \iftoggle{postscript}{
+% /jg \\
+% Attachments
+%
+% \vspace{\baselineskip}
+%
+% \begin{tabular}{@{}ll}
+% xc:& \CopyTo \\
+% & \CopyOffice
+% \end{tabular}
+% }
 
 \end{document}
