@@ -11,8 +11,8 @@
 \usepackage{setspace} % more specific line spacing
 \usepackage{array} % align columns in tabular
 \usepackage{tikz} % create small dot in footer
-\usepackage{helvet} % "Arial"-like font
-\renewcommand{\familydefault}{\sfdefault} % assign the font for use
+% \usepackage{helvet} % "Arial"-like font
+% \renewcommand{\familydefault}{\sfdefault} % assign the font for use
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
 \usepackage[link=off]{phonenumbers} % phone number formatting
 %----------------------------------------------------------------------------------------
@@ -103,12 +103,12 @@
 % CREATING A WATERMARK ACROSS ENTIRE PAGE
 % solution from: https://tex.stackexchange.com/a/46281
 %------------------------------------------------------------------------------------------------------------------------------
-% \newcommand\BackgroundPic{%
-% \put(0,0){%
-% \parbox[b][\paperheight]{\paperwidth}{%
-% \vfill
-% \centering
-% {\transparent{.05}\includegraphics[width=\textwidth,%
-% keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
-% \vfill
-% }}}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+{\transparent{.05}\includegraphics[width=\textwidth,%
+keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
+\vfill
+}}}
