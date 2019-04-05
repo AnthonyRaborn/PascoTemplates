@@ -3,8 +3,8 @@ title: "IRB Letter Template"
 date: \today
 output: 
   pdf_document:
-    # template: irb-letter-approval-template.tex #approval
-    template: irb-letter-approval-conditional-template.tex #conditional
+    template: irb-letter-approval-template.tex #approval
+    # template: irb-letter-approval-conditional-template.tex #conditional
     # template: irb-letter-denial-template.tex #denial
     keep_tex: true
 Who: "Peggy Jones"
@@ -28,5 +28,14 @@ Purpose: >
 Conditional: false
 CopyTo: "Vicki Papaemanuel, Supervisor"
 CopyOffice: "Office for Student Support Programs and Services"
+# ExtraCopyTo is optional
+ExtraCopyTo: > 
+  Melissa Bidgood, Principal, Veterans Elementary School \newline
+  Lori Wiggins, Principal, Double Branch Elementary School \newline
+  Sarah Bordner, Principal, New River Elementary School \newline
+  Rachel Fowler, Principal, Thomas E. Weightman Middle School \newline
+  Christine Wolff, Principal, Dr. John Long Middle School  \newline
+  Carin Hetzler-Nettles, Principal, Cypress Creek Middle High School \newline
+  Eric McDermott, Principal, Wesley Chapel High School \newline
+  Robyn White, Principal, Wiregrass Ranch High School \newline
 ---
-
