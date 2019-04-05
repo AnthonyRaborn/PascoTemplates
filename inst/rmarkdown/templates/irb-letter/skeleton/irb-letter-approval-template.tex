@@ -21,6 +21,7 @@
 \StudyAddress{$StudyAddress$}
 \CopyTo{$CopyTo$}
 \CopyOffice{$CopyOffice$}
+\ExtraCopyTo{$ExtraCopyTo$}
 \Purpose{$Purpose$}
 \pagestyle{fancy}
 
@@ -78,10 +79,10 @@ Attachments
 
 \vspace{\baselineskip}
 
-\begin{tabular}{@{}ll}
-xc:& \CopyTo \\
-& \CopyOffice
-\end{tabular}
+\begin{description}
+\item {xc: } \CopyTo, \CopyOffice\\
+\ExtraCopyTo
+\end{description}
 }
 
 

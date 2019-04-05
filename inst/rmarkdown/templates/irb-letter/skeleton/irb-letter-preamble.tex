@@ -11,8 +11,8 @@
 \usepackage{setspace} % more specific line spacing
 \usepackage{array} % align columns in tabular
 \usepackage{tikz} % create small dot in footer
-% \usepackage{helvet} % "Arial"-like font
-% \renewcommand{\familydefault}{\sfdefault} % assign the font for use
+\usepackage{helvet} % "Arial"-like font
+\renewcommand{\familydefault}{\sfdefault} % assign the font for use
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
 \usepackage[link=off]{phonenumbers} % phone number formatting
 %----------------------------------------------------------------------------------------
@@ -74,6 +74,7 @@
 \newcommand{\StudyAddress}[1]{\renewcommand{\StudyAddress}{#1}}
 \newcommand{\CopyTo}[1]{\renewcommand{\CopyTo}{#1}}
 \newcommand{\CopyOffice}[1]{\renewcommand{\CopyOffice}{#1}}
+\newcommand{\ExtraCopyTo}[1]{\renewcommand{\ExtraCopyTo}{#1}}
 \newcommand{\studydetails}[1]{\renewcommand{\studydetails}{#1}}
 \newcommand{\Purpose}[1]{\renewcommand{\Purpose}{#1}}
 \newcommand{\Conditional}[1]{\renewcommand{\Conditional}{#1}}
@@ -103,12 +104,12 @@
 % CREATING A WATERMARK ACROSS ENTIRE PAGE
 % solution from: https://tex.stackexchange.com/a/46281
 %------------------------------------------------------------------------------------------------------------------------------
-\newcommand\BackgroundPic{%
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-{\transparent{.05}\includegraphics[width=\textwidth,%
-keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
-\vfill
-}}}
+% \newcommand\BackgroundPic{%
+% \put(0,0){%
+% \parbox[b][\paperheight]{\paperwidth}{%
+% \vfill
+% \centering
+% {\transparent{.05}\includegraphics[width=\textwidth,%
+% keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
+% \vfill
+% }}}
