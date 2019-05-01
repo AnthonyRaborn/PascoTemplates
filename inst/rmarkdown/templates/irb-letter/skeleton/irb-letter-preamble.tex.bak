@@ -1,0 +1,115 @@
+%----------------------------------------------------------------------------------------
+% REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx, transparent, eso-pic} % Required for PCS logo & watermark background
+\pdfminorversion=7 % eliminates a warning when compliling. May need to be changed if graphics aren't appropriate
+\usepackage{lipsum} % filler text
+\usepackage{fancyhdr} % better header/footer styles
+\usepackage{etoolbox} % postscript toggle
+\usepackage{parskip} % paragraph distance
+\usepackage{microtype} % slightly better typography (looks)
+\usepackage{setspace} % more specific line spacing
+\usepackage{array} % align columns in tabular
+\usepackage{tikz} % create small dot in footer
+\usepackage{helvet} % "Arial"-like font
+\renewcommand{\familydefault}{\sfdefault} % assign the font for use
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
+\usepackage[link=off]{phonenumbers} % phone number formatting
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % Required for adjusting page dimensions
+\geometry{
+	%headheight=1pt, % header height
+	headsep=0cm, % seperation between header and body
+	top=1.0cm, % Top margin
+	bottom=4.2cm, % Bottom margin
+	left=2cm, % Left margin
+	right=2cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+%---------------------------------------------------------------------------------------
+% HEADER INFORMATION
+%---------------------------------------------------------------------------------------
+\fancyhf{}
+\fancyhead[L]{
+	% \begin{minipage}{.2\textwidth}
+		\includegraphics[width=\textwidth]{logos/pcs_letterhead_bw1} \vspace{1mm}
+	% 	\end{minipage}
+	% \begin{minipage}{.6\textwidth}
+	% 	\centering \small
+	% 	Pasco County Schools \\
+	% 	Kurt S. Browning, Superintendent of Schools\\
+	% 	7227 Land O'Lakes Boulevard \textbullet ~Land O'Lakes, Florida 34638
+	% 	\end{minipage}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{94pt}
+%----------------------------------------------------------------------------------------
+% FOOTER INFORMATION
+%----------------------------------------------------------------------------------------
+\newcommand{\sbt}{\tikz[baseline=-.5ex]\draw[black,fill=black] (0,0) circle (.2ex);}% creates a small dot
+\setlength{\footskip}{14pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{
+(813) 794-2000~\sbt~(352) 524-2000~\sbt~(727) 774-2000~\sbt~~\href{http://www.pascoschools.org}{www.pascoschools.org}
+}
+%----------------------------------------------------------------------------------------
+% NEW COMMANDS FOR FILLING IN LETTER
+%----------------------------------------------------------------------------------------
+\newcommand{\Who}[1]{\renewcommand{\Who}{#1}}
+\newcommand{\Title}[1]{\renewcommand{\Title}{#1}}
+\newcommand{\Department}[1]{\renewcommand{\Department}{#1}}
+\newcommand{\Email}[1]{\renewcommand{\Email}{#1}}
+\newcommand{\PhoneA}[1]{\renewcommand{\PhoneA}{#1}}
+\newcommand{\PhoneB}[1]{\renewcommand{\PhoneB}{#1}}
+\newcommand{\PhoneC}[1]{\renewcommand{\PhoneC}{#1}}
+\newcommand{\Fax}[1]{\renewcommand{\Fax}{#1}}
+\newcommand{\Office}[1]{\renewcommand{\Office}{#1}}
+\newcommand{\authordetails}[1]{\renewcommand{\authordetails}{#1}}
+
+\newcommand{\Study}[1]{\renewcommand{\Study}{#1}}
+\newcommand{\StudyAuthor}[1]{\renewcommand{\StudyAuthor}{#1}}
+\newcommand{\StudyAuthorTitle}[1]{\renewcommand{\StudyAuthorTitle}{#1}}
+\newcommand{\StudyAddress}[1]{\renewcommand{\StudyAddress}{#1}}
+\newcommand{\CopyTo}[1]{\renewcommand{\CopyTo}{#1}}
+\newcommand{\CopyOffice}[1]{\renewcommand{\CopyOffice}{#1}}
+\newcommand{\ExtraCopyTo}[1]{\renewcommand{\ExtraCopyTo}{#1}}
+\newcommand{\studydetails}[1]{\renewcommand{\studydetails}{#1}}
+\newcommand{\Purpose}[1]{\renewcommand{\Purpose}{#1}}
+\newcommand{\Conditional}[1]{\renewcommand{\Conditional}{#1}}
+
+\newtoggle{postscript}
+
+\authordetails{ % can be reordered
+	\Department \newline% Your department/institution
+	\Who, \Title \newline% Name and title
+	\begin{tabular}{@{}ll} % Your phone & fax number
+	\PhoneA & \PhoneB\\
+	\PhoneC & Fax: \Fax
+	\end{tabular}\newline
+	e-mail: \Email \newline% Your email address
+}
+\studydetails{
+	\StudyAuthorTitle \\ % name and title of individual who submitted the study
+	\StudyAddress \\ % Mailing address for the author
+}
+%----------------------------------------------------------------------------------------
+% PARAGRAPH OPTIONS
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt} % Remove paragraph indent
+\setlength{\parskip}{1em} % Adds spaces between paragraphs
+
+%------------------------------------------------------------------------------------------------------------------------------
+% CREATING A WATERMARK ACROSS ENTIRE PAGE
+% solution from: https://tex.stackexchange.com/a/46281
+%------------------------------------------------------------------------------------------------------------------------------
+% \newcommand\BackgroundPic{%
+% \put(0,0){%
+% \parbox[b][\paperheight]{\paperwidth}{%
+% \vfill
+% \centering
+% {\transparent{.05}\includegraphics[width=\textwidth,%
+% keepaspectratio]{logos/pcs_logo_emblem_grayscale}}%
+% \vfill
+% }}}

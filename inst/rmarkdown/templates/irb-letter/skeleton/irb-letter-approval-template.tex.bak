@@ -23,7 +23,6 @@
 \CopyOffice{$CopyOffice$}
 \ExtraCopyTo{$ExtraCopyTo$}
 \Purpose{$Purpose$}
-\Conditional{$Conditional$}
 \pagestyle{fancy}
 
 \begin{document}
@@ -44,16 +43,12 @@
 Dear \StudyAuthor:
 
 
-Attached you will find a conditional approval for your request to conduct your research study in
+Attached you will find an approval for your request to extend and modify your research study in
 Pasco County Schools entitled ``\Study.'' As per district procedures, teacher
 participants are not to receive compensation individually but may receive compensation to a
 school account for the teacher's classroom.
 
 \Purpose
-
-Your study is conditional upon meeting the following:
-
-\Conditional
 
 Your Pasco County Schools' contact person is \CopyTo, \CopyOffice.
 
@@ -84,10 +79,10 @@ Attachments
 
 \vspace{\baselineskip}
 
-\begin{tabular}{@{}ll}
-xc: & \CopyTo, \CopyOffice\\
- & \ExtraCopyTo
-\end{tabular}
+\begin{description}
+\item {xc: } \CopyTo, \CopyOffice\\
+\ExtraCopyTo
+\end{description}
 }
 
 
