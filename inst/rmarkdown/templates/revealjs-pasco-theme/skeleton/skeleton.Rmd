@@ -7,14 +7,19 @@ output:
   revealjs::revealjs_presentation:
     template: resources/pasco-template.html
     css: css/pasco.css
+    width: 500
+    fig_width: 5
+    fig_height: 4
+    fig_caption: true
 
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 library(kableExtra)
 library(broom)
 library(tidyverse)
+library(MASS)
 ```
 
 ## R Markdown
@@ -25,6 +30,15 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r cars}
 summary(cars)
+```
+
+## Lots of Code
+
+Some slides will have lots of code and/or printout. This can cause problems depending on the format of your slides.
+
+```{r lots-of-code}
+head(Aids2)
+tail(Aids2, n = 100) # long printout which gets cut off, but has a scroll bar. display: flex
 ```
 
 ## Including Plots
