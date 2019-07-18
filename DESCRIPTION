@@ -4,6 +4,7 @@ Version: 0.0.0.9000
 Authors@R: person("Anthony", "Raborn", email = "araborn@pasco.k12.fl.us", role = c("aut", "cre"))
 Description: A collection of document templates for use within Pasco County Schools. Includes templates for presentations, letters, and (eventually) more.
 Depends: R (>= 3.5.1)
-License: What license is it under?
+License: MIT
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1

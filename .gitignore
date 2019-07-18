@@ -9,4 +9,5 @@
 *.vrb
 *.toc
 *.pdf
-skeleton.tex
+*/skeleton.tex
+*/skeleton.html

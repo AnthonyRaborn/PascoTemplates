@@ -1,5 +1,7 @@
 ---
 title: "IRB Letter Template"
+#NOTE: DON'T FORGET TO PRINT THE LAST PAGE OF THE APPLICATION FOR A SECOND SIGNATURE
+#I MEAN IT
 date: \today
 output: 
   pdf_document:
