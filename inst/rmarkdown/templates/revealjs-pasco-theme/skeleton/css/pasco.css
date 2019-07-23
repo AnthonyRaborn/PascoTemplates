@@ -199,6 +199,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
           .reveal table td[align="right"] {
             text-align: right; }
 
+          .reveal table tr:nth-child(even) {
+            background-color: #264888;
+            background-color: rgba(38,72,136,.3);
+          }
+
           .reveal table tr:last-child td {
             border-bottom: none; }
 
