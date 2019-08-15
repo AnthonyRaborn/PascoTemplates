@@ -1,0 +1,18 @@
+---
+title: "Memo Template"
+output: 
+  pdf_document:
+    template: pcs-memo.tex
+    keep_tex: true
+To: "ARM Leadership"
+From: "Anthony Raborn, Ph.D."
+Date: '`r format(Sys.Date(), "%B %d, %Y")`'
+Subject: "Testing"
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat aliquet arcu. Aliquam aliquam, lectus ac convallis faucibus, arcu tortor lobortis eros, id rhoncus magna eros eu turpis. Phasellus dignissim velit ac metus vestibulum, et faucibus erat condimentum. Morbi ex neque, tincidunt vel quam ut, tempus vehicula sem. Pellentesque urna nibh, ornare quis scelerisque ultrices, dapibus nec nunc. Aliquam vitae dapibus lorem. Fusce ut urna auctor, auctor elit id, cursus orci. Integer ac felis vel massa tincidunt tincidunt. Proin ac imperdiet purus. In pretium et metus id ornare. Nulla facilisi. Integer in felis eu neque auctor fermentum.
+
+Mauris semper, lorem aliquam rhoncus rutrum, sapien nulla finibus nulla, nec euismod magna sapien quis tortor. Nam dictum risus vel sapien tincidunt, ut euismod sem semper. Aenean sagittis, elit condimentum ultrices ultrices, mauris nulla consequat leo, in commodo nulla lectus non nibh. Duis suscipit ante at nulla finibus, vitae mattis urna consectetur. Nulla facilisi. Maecenas bibendum sollicitudin purus, eu cursus lacus pretium non. Aliquam vel ultricies velit, eget dignissim est. Pellentesque feugiat justo placerat accumsan blandit. Mauris efficitur, tortor nec pretium venenatis, orci nisl aliquet erat, vitae pharetra libero massa sed diam. Nunc nisi justo, commodo id orci ut, lacinia tincidunt est. Ut iaculis viverra turpis nec sagittis. Duis et auctor dui.
+
+Aliquam imperdiet porta erat quis ullamcorper. Curabitur id leo tortor. Mauris interdum turpis porta pulvinar aliquet. Maecenas a eros vitae sem efficitur interdum eu et odio. In ultricies sapien nisi, ut efficitur quam cursus eget. Curabitur et placerat ipsum. Integer vulputate maximus vestibulum. Donec fermentum velit nec massa maximus, nec maximus lectus elementum. Curabitur lacinia et nisi a porttitor. Etiam fringilla neque turpis, laoreet tincidunt enim varius sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus.
+

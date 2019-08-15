@@ -1,0 +1,15 @@
+\documentclass[letterpaper,12pt]{memoARM}
+
+\To{ARM Leadership}
+\From{Anthony Raborn, Ph.D.}
+\Date{\today}
+\Subject{Testing}
+
+\begin{document}
+
+
+\memoHead
+
+
+
+\end{document}
