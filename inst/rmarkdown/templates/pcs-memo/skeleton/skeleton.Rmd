@@ -3,7 +3,6 @@ title: "Memo Template"
 output: 
   pdf_document:
     template: pcs-memo.tex
-    keep_tex: true
 To: "ARM Leadership"
 From: "Anthony Raborn, Ph.D."
 Date: '`r format(Sys.Date(), "%B %d, %Y")`'
