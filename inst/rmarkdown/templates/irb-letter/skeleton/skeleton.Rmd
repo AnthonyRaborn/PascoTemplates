@@ -25,9 +25,11 @@ StudyAddress: >
   University of South Florida \newline
   4202 East Fowler Avenue - EDU 105 \newline
   Tampa, FL 33620-5650
+Compensation: false # has to be either 'true' or 'false'!
 Purpose: >
-  Nothing.
-Conditional: false
+  Nothing. 
+# need to add "The purpose of your study is..." prior to the stated purpose!
+Conditional: false # if not 'false', then a list of the conditions
 CopyTo: "Vicki Papaemanuel, Supervisor"
 CopyOffice: "Office for Student Support Programs and Services"
 # ExtraCopyTo is optional
