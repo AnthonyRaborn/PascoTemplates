@@ -1,6 +1,7 @@
 Package: PascoTemplates
 Title: Collection of Pasco County Schools Document Templates for R
-Version: 0.0.2
+Date: 2019-10-10
+Version: 0.0.3
 Authors@R: person("Anthony", "Raborn", email = "araborn@pasco.k12.fl.us", role = c("aut", "cre"))
 Description: A collection of document templates for use within Pasco County Schools. Includes templates for presentations, letters, and (eventually) more.
 Depends: R (>= 3.5)
