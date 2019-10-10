@@ -18,4 +18,4 @@ When this package is installed, it adds templates to your RStudio installation. 
 
 ## Current Templates
 
-Currently, there are three templates using LaTeX, one for the IRB Letters we use at Pasco County Schools, another for a memorandum template I personally find interesting but which doesn't have a use yet, and a final for a Beamer presentation with custom themes. The third template uses the R library `revealjs` to create HTML presentations.
+Currently, there are three templates using LaTeX, one for the IRB Letters we use at Pasco County Schools, another for a memorandum template I personally find interesting but which doesn't have a use yet, and a final for a Beamer presentation with custom themes. The fourth template uses the R library `revealjs` to create HTML presentations.
