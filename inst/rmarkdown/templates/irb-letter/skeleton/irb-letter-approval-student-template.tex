@@ -1,0 +1,89 @@
+\documentclass[11pt,letterpaper]{article}
+
+\input{irb-letter-preamble.tex}
+
+%----------------------------------------------------------------------------------------
+% INFORMATION
+%----------------------------------------------------------------------------------------
+\Who{$Who$}
+\Title{$Title$}
+\Department{$Department$}
+\Office{Office of \Department}
+\Email{$Email$}
+\PhoneA{\phonenumber[country=US,area-code-sep=brackets]{$PhoneA$}}
+\PhoneB{\phonenumber[country=US,area-code-sep=brackets]{$PhoneB$}}
+\PhoneC{\phonenumber[country=US,area-code-sep=brackets]{$PhoneC$}}
+\Fax{\phonenumber[country=US,area-code-sep=brackets]{$Fax$}}
+
+\Study{$Study$}
+\StudyAuthor{$StudyAuthor$}
+\StudyAuthorTitle{$StudyAuthorTitle$}
+\StudyAddress{$StudyAddress$}
+\CopyTo{$CopyTo$}
+\CopyOffice{$CopyOffice$}
+\ExtraCopyTo{$ExtraCopyTo$}
+\Purpose{$Purpose$}
+\pagestyle{fancy}
+
+\begin{document}
+% \AddToShipoutPicture{\BackgroundPic}
+\begin{footnotesize}
+	\begin{spacing}{1}
+\authordetails
+	\end{spacing}
+\end{footnotesize}
+
+\today
+
+\bigskip
+
+\studydetails
+
+
+Dear \StudyAuthor:
+
+
+Attached you will find an approval for your AP Capstone research study in
+Pasco County Schools entitled ``\Study.'' \ifCompensation{As per district procedures, teacher
+participants are not to receive compensation individually but may receive compensation to a
+school account for the teacher's classroom.}\else{}\fi
+
+The purpose of your research study is a class assignment \Purpose
+
+Your Pasco County Schools' contact person is \CopyTo, \CopyOffice.
+
+We are always interested in the outcome of research conducted in our school system. When
+your study is complete, please forward a brief summary of your findings to the Office for
+Accountability, Research, and Measurement.
+
+Best of luck as you pursue the subject of your research.
+
+Sincerely,
+
+\bigskip
+
+\bigskip
+
+\Who, \Title \newline
+\Office
+
+\bigskip
+
+%---------------------------------------------------------------------------------------
+% OPTIONAL POSTSCRIPT REMARKS
+%---------------------------------------------------------------------------------------
+\toggletrue{postscript} % comment out to not use postscript
+\iftoggle{postscript}{
+/jg \\
+Attachments
+
+\vspace{\baselineskip}
+
+\begin{description}
+\item {xc: } \CopyTo, \CopyOffice\\
+\ExtraCopyTo
+\end{description}
+}
+
+
+\end{document}
