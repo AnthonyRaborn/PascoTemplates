@@ -5,9 +5,7 @@ title: "IRB Letter Template"
 date: \today
 output: 
   pdf_document:
-    template: irb-letter-approval-template.tex #approval
-    # template: irb-letter-approval-conditional-template.tex #conditional
-    # template: irb-letter-denial-template.tex #denial
+    template: irb-letter-approval-student-template.tex #approval
     keep_tex: true
 Who: "Peggy Jones"
 Title: "Ph.D., Director"
@@ -17,29 +15,21 @@ PhoneA: "813 794 2338"
 PhoneB: "727 774 2338"
 PhoneC: "352 524 2338"
 Fax: "813 794 2116"
-Study: "Development of Assessment Tools and Educator Training to Support Tier 2 Behavioral Intervention Selection"
-StudyAuthor: "Dr von der Embse"
-StudyAuthorTitle: "Nathaniel von der Embse, Ph.D., NCSP"
+Study: "Exploring the Impacts of an Upper-Secondary Education System that Utilizes Ability Grouping on Students' Self-Perception"
+StudyAuthor: "Olivia"
+StudyAuthorTitle: >
+  Olivia Maynard \newline <!-- Student first -->
+  c/o Ms. Jamela Orrego <!-- Then teacher -->
 StudyAddress: >
-  Department of Educational and Psychological Studies, College of Education \newline
-  University of South Florida \newline
-  4202 East Fowler Avenue - EDU 105 \newline
-  Tampa, FL 33620-5650
+  J. W. Mitchell High School
 Compensation: false # has to be either 'true' or 'false'!
 Purpose: >
-  Nothing. 
-# need to add "The purpose of your study is..." prior to the stated purpose!
+  to determine how ability grouping at the high school level wherein students are separated into courses such as those deemed AP/IB/DE, honors, and basic influences the way students view themselves in areas such as percieved intelligence and projections for future success. 
+# Autmatically includes "The purpose of your research study is a class assignment..." prior to above
 Conditional: false # if not 'false', then a list of the conditions
-CopyTo: "Vicki Papaemanuel, Supervisor"
-CopyOffice: "Office for Student Support Programs and Services"
+CopyTo: "Jamela Orrego"
+CopyOffice: "Social Studies Teacher, J. W. Mitchell High School"
 # ExtraCopyTo is optional
 ExtraCopyTo: > 
-  Melissa Bidgood, Principal, Veterans Elementary School \newline
-  Lori Wiggins, Principal, Double Branch Elementary School \newline
-  Sarah Bordner, Principal, New River Elementary School \newline
-  Rachel Fowler, Principal, Thomas E. Weightman Middle School \newline
-  Christine Wolff, Principal, Dr. John Long Middle School  \newline
-  Carin Hetzler-Nettles, Principal, Cypress Creek Middle High School \newline
-  Eric McDermott, Principal, Wesley Chapel High School \newline
-  Robyn White, Principal, Wiregrass Ranch High School \newline
+  Jessica Schultz, Principal, J. W. Mitchell High School \newline
 ---
