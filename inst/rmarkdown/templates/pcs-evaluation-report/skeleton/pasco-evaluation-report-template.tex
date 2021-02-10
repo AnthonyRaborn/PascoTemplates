@@ -1,0 +1,72 @@
+\documentclass[letterpaper,12pt]{article}
+%----------------------------------------------------------------------------------------
+% REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx} % Required for PCS logo
+\pdfminorversion=7 % eliminates a warning when compliling. May need to be changed if graphics aren't appropriate
+\usepackage{lipsum} % filler text
+\usepackage{fancyhdr} % better header/footer styles
+\usepackage{etoolbox} % postscript toggle
+\usepackage{parskip} % paragraph distance
+\usepackage{microtype} % slightly better typography (looks)
+\usepackage{setspace} % more specific line spacing
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
+\usepackage[link=off]{phonenumbers} % phone number formatting
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+\usepackage{geometry} % Required for adjusting page dimensions
+\geometry{
+	%headheight=1pt, % header height
+	headsep=0.1cm, % seperation between header and body
+	top=1.5cm, % Top margin
+	bottom=3.2cm, % Bottom margin
+	left=2cm, % Left margin
+	right=2cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+%---------------------------------------------------------------------------------------
+% TITLE PAGE
+%---------------------------------------------------------------------------------------
+\newcommand{ProjectTitle}[1]{\renewcommand{\ProjectTitle}{#1}}
+\newcommand{PrimaryAuthor}[1]{\renewcommand{\PrimaryAuthor}{#1}}
+\newcommand{OtherAuthors}[1]{\renewcommand{\OtherAuthors}{#1}}
+\newcommand{ContactInfo}[1]{\renewcommand{\ContactInfo}{#1}}
+\newcommand{ProjectDate}[1]{\renewcommand{\ProjectDate}{#1}}
+
+\newcommand{\ReportTitle}{\begingroup
+
+\endgroup}
+
+
+%---------------------------------------------------------------------------------------
+% HEADER INFORMATION
+%---------------------------------------------------------------------------------------
+\fancyhf{}
+\fancyhead[L]{
+	\begin{minipage}{.2\textwidth}
+		\includegraphics[width=1.5cm]{logos/pcs_logo_emblem_grayscale} \vspace{1mm}
+		\end{minipage}
+	\begin{minipage}{.6\textwidth}
+		\centering \small
+		Pasco County Schools \\
+		Kurt S. Browning, Superintendent of Schools\\
+		7227 Land O'Lakes Boulevard \textbullet ~Land O'Lakes, Florida 34638
+		\end{minipage}
+}
+\setlength{\headheight}{48pt}
+%----------------------------------------------------------------------------------------
+% FOOTER INFORMATION
+%----------------------------------------------------------------------------------------
+\renewcommand{\footrulewidth}{2pt}
+\fancyfoot[C]{
+%	\begin{center}
+(813) 794-2000 \hfill 
+\textbullet \hfill 
+(352) 524-2000 \hfill 
+\textbullet \hfill 
+(727) 774-2000 \hfill 
+\textbullet \hfill 
+\href{http://www.pascoschools.org}{www.pascoschools.org}
+%	\end{center}
+}
