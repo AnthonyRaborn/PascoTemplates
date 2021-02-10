@@ -25,11 +25,12 @@ StudyAddress: >
   University of South Florida \newline
   4202 East Fowler Avenue - EDU 105 \newline
   Tampa, FL 33620-5650
+Extend: true # true or false - is this an extension?
 Compensation: false # has to be either 'true' or 'false'!
 Purpose: >
   Nothing. 
 # need to add "The purpose of your study is..." prior to the stated purpose!
-Conditional: false # if not 'false', then a list of the conditions
+Conditional: false # if not 'false', then a list of the conditions - only works on conditional template
 CopyTo: "Vicki Papaemanuel, Supervisor"
 CopyOffice: "Office for Student Support Programs and Services"
 # ExtraCopyTo is optional
