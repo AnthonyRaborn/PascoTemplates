@@ -1,0 +1,55 @@
+---
+title: "PCS Evaluation Report Template"
+date: \today
+output:
+  pdf_document:
+    template: pasco-evaluation-report-template.tex
+    keep_tex: true
+ProjectTitle: "Sample Evaluation"
+PrimaryAuthor: "Evaluator Person, Supervisor, ARM"
+OtherAuthors: >
+ Sample Author, Senior Supervisor, OLL \newline 
+ External Author, Evaluator, Example Inc. \newline
+ContactInfo: "sample.email@pasco.k12.fl.us"
+ProjectDate: \today
+---
+
+# Executive Summary
+
+\lipsum[1-5]
+
+# Data Description
+
+\lipsum[6]
+
+## Data Type 1
+
+\lipsum[7-8]
+
+## Data Type 2
+
+\lipsum[9-10]
+
+# Cleaning
+
+\lipsum[11-13]
+
+# Analysis
+
+\lipsum[14-16]
+
+## Method 1
+
+\lipsum[17-19]
+
+## Method 2 
+
+\lipsum[20-22]
+
+## Results
+
+\lipsum[23-25]
+
+# Conclusion
+
+\lipsum[26-30]
