@@ -1,17 +1,15 @@
 ---
-title: "PCS Evaluation Report Template"
-date: \today
+title: 'PCS Evaluation Report Template'
+date: '\today'
 output:
-  pdf_document:
+  pdf_document: 
     template: pasco-evaluation-report-template.tex
-    keep_tex: true
-ProjectTitle: "Sample Evaluation"
-PrimaryAuthor: "Evaluator Person, Supervisor, ARM"
-OtherAuthors: >
- Sample Author, Senior Supervisor, OLL \newline 
- External Author, Evaluator, Example Inc. \newline
-ContactInfo: "sample.email@pasco.k12.fl.us"
-ProjectDate: \today
+    keep_tex: yes
+ProjectTitle: 'Sample Evaluation Report: A Template for Presentation'
+PrimaryAuthor: 'Evaluator Person, Supervisor, ARM'
+OtherAuthors: 'Sample Author, Senior Supervisor, OLL \newline  External Author, Evaluator, Example Inc. \newline'
+ContactInfo: 'sample.email@pasco.k12.fl.us'
+ProjectDate: '\today'
 ---
 
 # Executive Summary
