@@ -14,7 +14,16 @@ ProjectDate: '\today'
 
 # Executive Summary
 
-\lipsum[1-5]
+\lipsum[1]
+
+
+```{r cars}
+summary(cars)
+plot(cars, xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+    las = 1, xlim = c(0, 25))
+```
+
+\lipsum[2-5]
 
 # Data Description
 
