@@ -16,7 +16,9 @@
 \usepackage{ragged2e} % "better"(?) text alignment options
 \usepackage{background} % watermark
 \usepackage{silence}
-\WarningsOff[everypage]% Suppress warnings related to package everypage
+\WarningsOff[everypage] % Suppress warnings related to package everypage
+\usepackage{titlesec} % easier changes to section formats
+\newcommand{\sectionbreak}{\clearpage} % every section printed on a new page
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % clickable email and website links
 %\usepackage[link=off]{phonenumbers} % phone number formatting
 %----------------------------------------------------------------------------------------
@@ -63,7 +65,7 @@ contents={\includegraphics[width=\textwidth,keepaspectratio]{logos/pcs_logo_embl
 
 \newcommand{\ReportTitle}{\begingroup%
 
-\reversemarginpar\marginpar{\hfill\color{PCSblue}\rule{6pt}{\textheight}}
+\reversemarginpar\marginpar{\hfill\color{PCSblue}\rule{12pt}{\textheight}}
 \Centering
 {\includegraphics[width=.6\textwidth]{logos/pcs_logo_color}}\newline
 {\color{PCSgreen}\rule{\textwidth}{3pt} \par}
@@ -89,7 +91,6 @@ contents={\includegraphics[width=\textwidth,keepaspectratio]{logos/pcs_logo_embl
 \fancyhead[L]{\ProjectTitle}
 \fancyhead[R]{\includegraphics[height=.75\headheight]{logos/ARM-diagram-color-white.png}}
 %----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
 % FOOTER INFORMATION
 %----------------------------------------------------------------------------------------
 \renewcommand{\footrulewidth}{2pt}
@@ -97,7 +98,26 @@ contents={\includegraphics[width=\textwidth,keepaspectratio]{logos/pcs_logo_embl
 \Centering\ProjectDate\newline
 Page \thepage{} of \pageref*{LastPage}
 }
-
+%----------------------------------------------------------------------------------------
+% CUSTOM (SUB)SECTION HEADERS FORMAT
+%----------------------------------------------------------------------------------------
+% start new sections on a new page
+\renewcommand{\sectionbreak}{\clearpage}
+% add extra space before new sections
+\titlespacing{\section}{0pt}{\baselineskip}{\parskip}
+% add color rule beneath section headers
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\color{PCSred}\titlerule[3pt]}]
+%----------------------------------------------------------------------------------------
+% CUSTOM CODE OUTPUT
+%----------------------------------------------------------------------------------------
+\usepackage{mdframed}
+\renewenvironment{Shaded}{
+\begin{mdframed}[linecolor=black,topline=false,rightline=false,
+skipabove=10pt,skipbelow=3pt]}{\end{mdframed}}
+%----------------------------------------------------------------------------------------
+% START DOCUMENT
+%----------------------------------------------------------------------------------------
 \begin{document}
 \pagestyle{empty}
 \ReportTitle
