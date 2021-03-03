@@ -43,10 +43,10 @@
 Dear \StudyAuthor:
 
 
-Attached you will find an approval for your request to extend and modify your research study in
-Pasco County Schools entitled ``\Study.'' As per district procedures, teacher
+Attached you will find an approval for your \ifExtend{request to extend and modify your research study }\else{research study }\fi in
+Pasco County Schools entitled ``\Study.'' \ifCompensation{As per district procedures, teacher
 participants are not to receive compensation individually but may receive compensation to a
-school account for the teacher's classroom.
+school account for the teacher's classroom.}\else{}\fi
 
 \Purpose
 
