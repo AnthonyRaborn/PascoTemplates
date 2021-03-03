@@ -1,0 +1,76 @@
+\documentclass[11pt,letterpaper]{article}
+
+\input{letter-preamble.tex}
+
+%----------------------------------------------------------------------------------------
+% INFORMATION
+%----------------------------------------------------------------------------------------
+\Who{Anthony Raborn}
+\Title{Supervisor}
+\Department{Accountability, Research, and Measurement}
+\Office{Office of \Department}
+\Email{\href{mailto:araborn@pasco.k12.fl.us}{\nolinkurl{araborn@pasco.k12.fl.us}}}
+\PhoneA{\phonenumber[country=US,area-code-sep=brackets]{813 794 2337}}
+\PhoneB{\phonenumber[country=US,area-code-sep=brackets]{727 774 2337}}
+\PhoneC{\phonenumber[country=US,area-code-sep=brackets]{352 524 2337}}
+\Fax{\phonenumber[country=US,area-code-sep=brackets]{813 794 2116}}
+
+
+%\StudyAuthor{Dr von der Embse}
+\StudyAuthorTitle{Front Office}
+\StudyAddress{Zephyrhills High School \newline
+6335 12th Street \newline
+Zephyrhills, FL 33542}
+%\CopyTo{Vicki Papaemanuel, Supervisor}
+%\CopyOffice{Office for Student Support Programs and Services}
+%\Purpose{Nothing.}
+\pagestyle{fancy}
+
+\begin{document}
+% \AddToShipoutPicture{\BackgroundPic}
+\begin{footnotesize}
+	\begin{spacing}{1}
+\authordetails
+	\end{spacing}
+\end{footnotesize}
+
+\today
+
+\bigskip
+
+\studydetails
+
+
+To Whom It May Concern:
+
+Please find enclosed in this envelope the key to the Teacher's Lounge you lent me on February 24th as a part of the Cambridge Focus Groups my department conducted at your school. In the excitement of the fire drill, I had forgotten to return it to the office after I left. I apologize for any inconvenience this may have caused.
+
+Sincerely,
+
+\bigskip
+
+\bigskip
+
+\Who, \Title \newline
+\Office
+
+\bigskip
+
+%---------------------------------------------------------------------------------------
+% OPTIONAL POSTSCRIPT REMARKS
+%---------------------------------------------------------------------------------------
+%\toggletrue{postscript} % comment out to not use postscript
+\iftoggle{postscript}{
+/jg \\
+Attachments
+
+\vspace{\baselineskip}
+
+\begin{description}
+\item {xc: } \CopyTo, \CopyOffice\\
+\ExtraCopyTo
+\end{description}
+}
+
+
+\end{document}
