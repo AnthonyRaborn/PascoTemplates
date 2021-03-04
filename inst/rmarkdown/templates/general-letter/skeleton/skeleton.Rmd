@@ -1,0 +1,32 @@
+---
+title: "IRB Letter Template"
+#NOTE: DON'T FORGET TO PRINT THE LAST PAGE OF THE APPLICATION FOR A SECOND SIGNATURE
+#I MEAN IT
+date: \today
+output: 
+  pdf_document:
+    template: irb-letter-approval-template.tex #approval
+    # template: irb-letter-approval-conditional-template.tex #conditional
+    # template: irb-letter-denial-template.tex #denial
+    keep_tex: true
+Who: "Peggy Jones"
+Title: "Ph.D., Director"
+Department: "Accountability, Research, and Measurement"
+Email: "pejones@pasco.k12.fl.us"
+PhoneA: "813 794 2338"
+PhoneB: "727 774 2338"
+PhoneC: "352 524 2338"
+Fax: "813 794 2116"
+Study: "Development of Assessment Tools and Educator Training to Support Tier 2 Behavioral Intervention Selection"
+StudyAuthor: "Dr von der Embse"
+StudyAuthorTitle: "Nathaniel von der Embse, Ph.D., NCSP"
+StudyAddress: >
+  Department of Educational and Psychological Studies, College of Education \newline
+  University of South Florida \newline
+  4202 East Fowler Avenue - EDU 105 \newline
+  Tampa, FL 33620-5650
+# below is optional
+CopyTo: ""
+CopyOffice: ""
+ExtraCopyTo: > 
+---
